@@ -4,6 +4,7 @@ import { HousingLocation } from './housing-location';
   providedIn: 'root'
 })
 export class HousingService {
+  
   protected housingLocations: HousingLocation[] = [
     {
       id: 0,
@@ -116,5 +117,8 @@ export class HousingService {
 
   getHousingLocationById(id: number): HousingLocation|undefined {
     return this.housingLocations.find(housingLocation => housingLocation.id === id)!;
+  }
+  submitApplication(firstName: string, lastName: string, email: string):void {
+    console.log(firstName,lastName,email)
   }
 }
